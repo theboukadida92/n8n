@@ -10,6 +10,8 @@ services:
     plan: standard
     healthCheckPath: /healthz
     envVars:
+      - key: NODE_VERSION
+        value: "20.15.0"
       - key: N8N_PORT
         value: 5678
       - key: N8N_PROTOCOL
@@ -52,6 +54,8 @@ services:
     plan: standard
     numInstances: 0  # Only run when triggered
     envVars:
+      - key: NODE_VERSION
+        value: "20.15.0"
       - key: CYPRESS_BASE_URL
         fromService:
           name: n8n
